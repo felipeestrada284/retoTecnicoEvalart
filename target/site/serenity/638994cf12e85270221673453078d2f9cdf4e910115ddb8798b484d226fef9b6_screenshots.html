@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="977476a74515c5371ddc4a44a7889fa7a9d4e970b28b127fcd96d78630c8fca9.html">Complete The Cycles In The Form</a></span>
+                > <span class="truncate-60"><a
+                    href="638994cf12e85270221673453078d2f9cdf4e910115ddb8798b484d226fef9b6.html">Complete form in the evalart app </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 13-11-2024 17:27</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Complete The Cycles In The Form </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                            <div class="requirementNarrative">Background: Login
+                                    <p></p>
+                            </div>
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="d4af71cee35d1a1ec2130a6f32f089203c482da1cd71498860b036d76ba9e698.html">Complete Form
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Complete form in the evalart app
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f413fbfe5eb12a6aaac2fc45e4530346db86de2a5ab93ed482d02b9f18ca013b.png" title=" Given user navigate to web site login page" width="2160"/>
+                <img src="f413fbfe5eb12a6aaac2fc45e4530346db86de2a5ab93ed482d02b9f18ca013b.png" title=" Usuario navigate to website" width="2160"/>
+                <img src="f413fbfe5eb12a6aaac2fc45e4530346db86de2a5ab93ed482d02b9f18ca013b.png" title=" Usuario opens the browser at https://tasks.evalartapp.com/automatization/" width="2160"/>
+                <img src="f413fbfe5eb12a6aaac2fc45e4530346db86de2a5ab93ed482d02b9f18ca013b.png" title=" Usuario navigate to website (completed)" width="2160"/>
+                <img src="f413fbfe5eb12a6aaac2fc45e4530346db86de2a5ab93ed482d02b9f18ca013b.png" title=" Given user navigate to web site login page (completed)" width="2160"/>
+                <img src="bffd2c15551d6a9ac0cc7ab7c1866909ed4ef976ab58fa475cba52ad455270fc.png" title=" When user login in the app whit the user &quot;950326&quot; and password &quot;10df2f32286b7120Mi00LTYyMzA1OQ==30e0c83e6c29f1c3&quot;" width="2160"/>
+                <img src="bffd2c15551d6a9ac0cc7ab7c1866909ed4ef976ab58fa475cba52ad455270fc.png" title=" Usuario enters '950326' into Text box username" width="2160"/>
+                <img src="bffd2c15551d6a9ac0cc7ab7c1866909ed4ef976ab58fa475cba52ad455270fc.png" title=" Usuario enters '10df2f32286b7120Mi00LTYyMzA1OQ==30e0c83e6c29f1c3' into Text box password" width="2160"/>
+                <img src="bed446f72be1b2620b732ac969d94249ed66a1bdbe4730871dfed9fb126e3517.png" title=" Usuario enters '10df2f32286b7120Mi00LTYyMzA1OQ==30e0c83e6c29f1c3' into Text box password (completed)" width="2160"/>
+                <img src="bed446f72be1b2620b732ac969d94249ed66a1bdbe4730871dfed9fb126e3517.png" title=" Usuario clicks on Button send" width="2160"/>
+                <img src="591b8ed9503ed85a8647406e6452eefea8eda4103b86feba782405de17406f06.png" title=" Usuario clicks on Button send (completed)" width="2160"/>
+                <img src="591b8ed9503ed85a8647406e6452eefea8eda4103b86feba782405de17406f06.png" title=" When user login in the app whit the user &quot;950326&quot; and password &quot;10df2f32286b7120Mi00LTYyMzA1OQ==30e0c83e6c29f1c3&quot; (completed)" width="2160"/>
+                <img src="591b8ed9503ed85a8647406e6452eefea8eda4103b86feba782405de17406f06.png" title=" And the user can see the login text" width="2160"/>
+                <img src="591b8ed9503ed85a8647406e6452eefea8eda4103b86feba782405de17406f06.png" title=" Then validate text" width="2160"/>
+                <img src="1180d657b6a63df0e43b6dc1d5aeba23972c8e509c883faf89d8e4e6043c1128.png" title=" And the user complete the form" width="2160"/>
+                <img src="1180d657b6a63df0e43b6dc1d5aeba23972c8e509c883faf89d8e4e6043c1128.png" title=" Usuario complete form" width="2160"/>
+                <img src="1180d657b6a63df0e43b6dc1d5aeba23972c8e509c883faf89d8e4e6043c1128.png" title=" Usuario clicks on Lbl operation" width="2160"/>
+                <img src="1180d657b6a63df0e43b6dc1d5aeba23972c8e509c883faf89d8e4e6043c1128.png" title=" Usuario enters '17' into Inp figure number" width="2160"/>
+                <img src="a6ff4ed45cfd550c7c808b4fe944b464214bde8c1250f8fdcebf5836ddbe42e2.png" title=" Usuario enters '17' into Inp figure number (completed)" width="2160"/>
+                <img src="d2941583ad80ba9ce3b1401d362da23de2324414fd944ba879a65fbdaa8855b6.png" title=" Usuario selects #value in Select response" width="2160"/>
+                <img src="ef47d7c145bdfbb1f866e4d9ba2843adf05f2188b618a25fa3a24d7737cbaf94.png" title=" Usuario selects #value in Select response (completed)" width="2160"/>
+                <img src="ef47d7c145bdfbb1f866e4d9ba2843adf05f2188b618a25fa3a24d7737cbaf94.png" title=" Usuario clicks on button send" width="2160"/>
+                <img src="d8759e8082d8093f6b5fb7fb2a4a7bb8eabd877d1c98e7f99781829d29451e2e.png" title=" Usuario clicks on button send (completed)" width="2160"/>
+                <img src="d8759e8082d8093f6b5fb7fb2a4a7bb8eabd877d1c98e7f99781829d29451e2e.png" title=" Usuario clicks on Lbl operation" width="2160"/>
+                <img src="e3de18e7877d0b60cdfece0e662845ab18ddb91470b7fa717361bf4814328c00.png" title=" Usuario clicks on Lbl operation (completed)" width="2160"/>
+                <img src="e3de18e7877d0b60cdfece0e662845ab18ddb91470b7fa717361bf4814328c00.png" title=" Usuario enters '16' into Inp figure number" width="2160"/>
+                <img src="79509ba40a7241e96823afcac1d4a359ed69c5c025fde09515cfda891ffe39fe.png" title=" Usuario enters '16' into Inp figure number (completed)" width="2160"/>
+                <img src="1d71dfc081a736c9004f2b4529e0f76f46d78a4b454349c44c208dd7a21db538.png" title=" Usuario selects #value in Select response" width="2160"/>
+                <img src="b85301a3ab29a64f5551b5a1b72fd5b709ee409ec8a4936d094f1e48c5f31041.png" title=" Usuario selects #value in Select response (completed)" width="2160"/>
+                <img src="b85301a3ab29a64f5551b5a1b72fd5b709ee409ec8a4936d094f1e48c5f31041.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="5e838df7949108efe4f6de402db669367ed1a9acafbd9b84fde2d6f807a1dc82.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="5e838df7949108efe4f6de402db669367ed1a9acafbd9b84fde2d6f807a1dc82.png" title=" Usuario clicks on button send" width="2160"/>
+                <img src="5f71bb502424dd16cede45a9145b8ff12a333a1177e4362eba320d4d084638ef.png" title=" Usuario clicks on button send (completed)" width="2160"/>
+                <img src="5f71bb502424dd16cede45a9145b8ff12a333a1177e4362eba320d4d084638ef.png" title=" Usuario clicks on Lbl operation" width="2160"/>
+                <img src="8e2b994e1474ed000e4a0e26b779d69c19cba8187fc5c504335f8654657dbd60.png" title=" Usuario clicks on Lbl operation (completed)" width="2160"/>
+                <img src="8e2b994e1474ed000e4a0e26b779d69c19cba8187fc5c504335f8654657dbd60.png" title=" Usuario enters '18' into Inp figure number" width="2160"/>
+                <img src="2865eaaf26585deb4b2f7d600147267c01c754d70dcf053a126215e170d81771.png" title=" Usuario enters '18' into Inp figure number (completed)" width="2160"/>
+                <img src="c57f528e23367e9a1400a15dbbfd8ff61d3e531807df1f59548e4d48cc7f09d7.png" title=" Usuario selects #value in Select response" width="2160"/>
+                <img src="573f8bf71d4e3bbc2766f74d7caefd6677a7f2cebaa83bd84c713d6c5a92853c.png" title=" Usuario selects #value in Select response (completed)" width="2160"/>
+                <img src="573f8bf71d4e3bbc2766f74d7caefd6677a7f2cebaa83bd84c713d6c5a92853c.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="b34f89a6c3d18da0cb856ac6167d9802942a302e0260817b17e98744e5f454f7.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="b34f89a6c3d18da0cb856ac6167d9802942a302e0260817b17e98744e5f454f7.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="d1cae7830f615f9ca661e8bd3a844003c3ff84d101a3d76ec0782d0e75a07342.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="d1cae7830f615f9ca661e8bd3a844003c3ff84d101a3d76ec0782d0e75a07342.png" title=" Usuario clicks on button send" width="2160"/>
+                <img src="039e539bf0a5ca6d116ae76c6b40b38b94a4fa5ccc7fe2104b97936d3ba868c4.png" title=" Usuario clicks on button send (completed)" width="2160"/>
+                <img src="039e539bf0a5ca6d116ae76c6b40b38b94a4fa5ccc7fe2104b97936d3ba868c4.png" title=" Usuario clicks on Lbl operation" width="2160"/>
+                <img src="2b3046a9e53a92a3dea8b4d36acc926a8d184e89c7f24fcd68cc4d81cdcae1af.png" title=" Usuario clicks on Lbl operation (completed)" width="2160"/>
+                <img src="2b3046a9e53a92a3dea8b4d36acc926a8d184e89c7f24fcd68cc4d81cdcae1af.png" title=" Usuario enters '18' into Inp figure number" width="2160"/>
+                <img src="e3d33b5f004108dc0a63ea5a21012dc39835e8fc69a239c0ad1d9ff7386c5ce1.png" title=" Usuario enters '18' into Inp figure number (completed)" width="2160"/>
+                <img src="4bb5ffb1019dc2ee623d4dc659e77e3c2ed5f0a4744e5b1555cfe543a5c78dc8.png" title=" Usuario selects #value in Select response" width="2160"/>
+                <img src="5a153d49c38aba79be358406a786cbfa3da785ec5611df17fb9f2573dadb1a34.png" title=" Usuario selects #value in Select response (completed)" width="2160"/>
+                <img src="5a153d49c38aba79be358406a786cbfa3da785ec5611df17fb9f2573dadb1a34.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="a6c23a48347157bee4ba5ab16a753ab7d3b6dace20255df869f26f1eedc7726a.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="a6c23a48347157bee4ba5ab16a753ab7d3b6dace20255df869f26f1eedc7726a.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="fa43211d9edb3b099a95527c87cacdb15cf02be5f1145938d3d0c8bb5d2d95a0.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="fa43211d9edb3b099a95527c87cacdb15cf02be5f1145938d3d0c8bb5d2d95a0.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="985430d1f131f460d632cd4116d30a690969b673f65b82ee134cb041041db53b.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="985430d1f131f460d632cd4116d30a690969b673f65b82ee134cb041041db53b.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="d9638a94682a776afe5a171fd101569192ea7351e36fbd9e62aeb2299c3ca93d.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="d9638a94682a776afe5a171fd101569192ea7351e36fbd9e62aeb2299c3ca93d.png" title=" Usuario clicks on button send" width="2160"/>
+                <img src="3cfca7d9ffbc2501186032601c27135623723edfce75558f46141e9c1167825a.png" title=" Usuario clicks on button send (completed)" width="2160"/>
+                <img src="3cfca7d9ffbc2501186032601c27135623723edfce75558f46141e9c1167825a.png" title=" Usuario clicks on Lbl operation" width="2160"/>
+                <img src="be91382749fe595d9a03a519a4aed6115dddfbdee7c28464de928e579c862858.png" title=" Usuario clicks on Lbl operation (completed)" width="2160"/>
+                <img src="be91382749fe595d9a03a519a4aed6115dddfbdee7c28464de928e579c862858.png" title=" Usuario enters '18' into Inp figure number" width="2160"/>
+                <img src="4d27064ec223a3d488d8bd893a9d2523fbf4301840d66947be41948158b19d95.png" title=" Usuario enters '18' into Inp figure number (completed)" width="2160"/>
+                <img src="a3e4025404739529c74095efb132d51317446074175a3544f89c02dfb64a8908.png" title=" Usuario selects #value in Select response" width="2160"/>
+                <img src="8eb0153ee6bbacd0215bb927012d468a18b5bd3b3494078b8cc724cb81f3a883.png" title=" Usuario selects #value in Select response (completed)" width="2160"/>
+                <img src="8eb0153ee6bbacd0215bb927012d468a18b5bd3b3494078b8cc724cb81f3a883.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="0f8770e7610e06480e9041964df256c8535f5e23b4f7b39c82b77ff226456aac.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="0f8770e7610e06480e9041964df256c8535f5e23b4f7b39c82b77ff226456aac.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="456b9faba545080fca15c78687557886f0b23c61b23189b025f8c0756a3a76b1.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="456b9faba545080fca15c78687557886f0b23c61b23189b025f8c0756a3a76b1.png" title=" Usuario clicks on button send" width="2160"/>
+                <img src="9882a100c45d2e90a135b8453a861d7f46b8f33d6460cbfa3eefdc1ed18392cb.png" title=" Usuario clicks on button send (completed)" width="2160"/>
+                <img src="9882a100c45d2e90a135b8453a861d7f46b8f33d6460cbfa3eefdc1ed18392cb.png" title=" Usuario clicks on Lbl operation" width="2160"/>
+                <img src="cc0ed1a70646e10ccd20dc907e20556fdb44203f8446637c07b9d23f41da84be.png" title=" Usuario clicks on Lbl operation (completed)" width="2160"/>
+                <img src="cc0ed1a70646e10ccd20dc907e20556fdb44203f8446637c07b9d23f41da84be.png" title=" Usuario enters '14' into Inp figure number" width="2160"/>
+                <img src="0d6cff2936d2f7eed2f48c9db93507257c51f1aaaf6d8d02490f8d92902f3c8f.png" title=" Usuario enters '14' into Inp figure number (completed)" width="2160"/>
+                <img src="7ac16f3a23000b153f0421f6aa8c80c61b6c7ca6906b5082de31c06d6780bea1.png" title=" Usuario selects #value in Select response" width="2160"/>
+                <img src="4f37866a45367fc374e5a534c9e3ab5eb81e055f8ea0e466ab6817685217f1f4.png" title=" Usuario selects #value in Select response (completed)" width="2160"/>
+                <img src="4f37866a45367fc374e5a534c9e3ab5eb81e055f8ea0e466ab6817685217f1f4.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="94e80c0fc55a7d5372e6a2ebd093f1e54cf48be023ff63ada9268b8d81eab2f2.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="94e80c0fc55a7d5372e6a2ebd093f1e54cf48be023ff63ada9268b8d81eab2f2.png" title=" Usuario clicks on button send" width="2160"/>
+                <img src="93c4111c1b497061d77504503f9cdcee1d0f6d36cff5976a12f81c908691119c.png" title=" Usuario clicks on button send (completed)" width="2160"/>
+                <img src="93c4111c1b497061d77504503f9cdcee1d0f6d36cff5976a12f81c908691119c.png" title=" Usuario clicks on Lbl operation" width="2160"/>
+                <img src="24b274604e1fe2a32066dab18794270b500ee71021c2545a17ce86f336264202.png" title=" Usuario clicks on Lbl operation (completed)" width="2160"/>
+                <img src="24b274604e1fe2a32066dab18794270b500ee71021c2545a17ce86f336264202.png" title=" Usuario enters '17' into Inp figure number" width="2160"/>
+                <img src="63b47884fd273e12414cf3e5e2929ae80be0cf475418ddde32f73af8b3ad3b40.png" title=" Usuario enters '17' into Inp figure number (completed)" width="2160"/>
+                <img src="330114b41529b0093650f2bd99a44b74212e491c00187ee46539f4a525aab381.png" title=" Usuario selects #value in Select response" width="2160"/>
+                <img src="31b50f335f98ee6b94c0080d24df1e5ee580bc320c3fdcbed3a988cc2725c410.png" title=" Usuario selects #value in Select response (completed)" width="2160"/>
+                <img src="31b50f335f98ee6b94c0080d24df1e5ee580bc320c3fdcbed3a988cc2725c410.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="ac7137ac383545a59b7fca00e9168313e244f784ce97c421b1fdd88d4137e83b.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="ac7137ac383545a59b7fca00e9168313e244f784ce97c421b1fdd88d4137e83b.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="9d1cd7f52a365be65dd3810ca9ca73d7bf20016f91bdf30b79e1966021a6f400.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="9d1cd7f52a365be65dd3810ca9ca73d7bf20016f91bdf30b79e1966021a6f400.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="0394533ac575e836d6c51110d9fd78a8115597938d25a1c153520054d51c9ecc.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="0394533ac575e836d6c51110d9fd78a8115597938d25a1c153520054d51c9ecc.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="ffcf51cb3010ab36caa1920ac0510a2fd74df9802a7f0076cd089724815d6a4b.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="ffcf51cb3010ab36caa1920ac0510a2fd74df9802a7f0076cd089724815d6a4b.png" title=" Usuario clicks on button send" width="2160"/>
+                <img src="01c6d56832166e4772da362774b0ce044b804b31fab66e9532f674fb7aae20de.png" title=" Usuario clicks on button send (completed)" width="2160"/>
+                <img src="01c6d56832166e4772da362774b0ce044b804b31fab66e9532f674fb7aae20de.png" title=" Usuario clicks on Lbl operation" width="2160"/>
+                <img src="91f8f1cba09d2c91e85d93514faeff5985d75a1da24cefefc2b4b383859db42b.png" title=" Usuario clicks on Lbl operation (completed)" width="2160"/>
+                <img src="91f8f1cba09d2c91e85d93514faeff5985d75a1da24cefefc2b4b383859db42b.png" title=" Usuario enters '12' into Inp figure number" width="2160"/>
+                <img src="8e412fd69f79ba742138ac82b01f0ee5f6f63e080b9cad23d8290559411c2e2f.png" title=" Usuario enters '12' into Inp figure number" width="2160"/>
+                <img src="3a1da5f3b552c733e6cea8dab2a92cfe05e7a6507f44673d5123e4d4473bf196.png" title=" Usuario enters '12' into Inp figure number (completed)" width="2160"/>
+                <img src="fd25965105789d2d43818283dea510d9df1c6a6c35f6ecc44e37f95d535a9730.png" title=" Usuario selects #value in Select response" width="2160"/>
+                <img src="db8b252446a18a6106aa9c9e1e7ddd8c4082cb76038c941b3afb9bc306f07b08.png" title=" Usuario selects #value in Select response (completed)" width="2160"/>
+                <img src="db8b252446a18a6106aa9c9e1e7ddd8c4082cb76038c941b3afb9bc306f07b08.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="6d0884e110a3a537749203e870197596cb201c98e1e0a10f6743a106926f37e9.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="6d0884e110a3a537749203e870197596cb201c98e1e0a10f6743a106926f37e9.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="e8292d872471d182bd0ca9ba727b912ee687d809011ad07332aba5d3933f0e53.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="e8292d872471d182bd0ca9ba727b912ee687d809011ad07332aba5d3933f0e53.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="ff0dd5135c7f968ae9a6ddf014c2aa90d6ee2de964aa99818036b4540ffa980c.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="ff0dd5135c7f968ae9a6ddf014c2aa90d6ee2de964aa99818036b4540ffa980c.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="43372abd520bb884609c195567a7c39d79c75afe64f29925c65a0369f3972a63.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="43372abd520bb884609c195567a7c39d79c75afe64f29925c65a0369f3972a63.png" title=" Usuario clicks on button send" width="2160"/>
+                <img src="97625c728470b26ea4fa239329bb278e17f33d022ffcfc88f301a38675f697a7.png" title=" Usuario clicks on button send (completed)" width="2160"/>
+                <img src="97625c728470b26ea4fa239329bb278e17f33d022ffcfc88f301a38675f697a7.png" title=" Usuario clicks on Lbl operation" width="2160"/>
+                <img src="6aae6c1de6750f081c693209c308012d3175b58292afe5b21f8aeade7bf2bca5.png" title=" Usuario clicks on Lbl operation (completed)" width="2160"/>
+                <img src="6aae6c1de6750f081c693209c308012d3175b58292afe5b21f8aeade7bf2bca5.png" title=" Usuario enters '12' into Inp figure number" width="2160"/>
+                <img src="66ac0e9953015371db8e4ecfc5927cdf10413edb5644d23507870a5a1f548753.png" title=" Usuario enters '12' into Inp figure number (completed)" width="2160"/>
+                <img src="74ed3434a302deec59d06045cf6b8c4e859bf91d4818b40b46a9c06d5091c5c6.png" title=" Usuario selects #value in Select response" width="2160"/>
+                <img src="1b94e5cbafc6a98371d1796845d6e7b3591a2e70aedcb2c1594961808663bc7d.png" title=" Usuario selects #value in Select response (completed)" width="2160"/>
+                <img src="1b94e5cbafc6a98371d1796845d6e7b3591a2e70aedcb2c1594961808663bc7d.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="df0fb48401646587784622c9b667f665ebcecb9cf17c5cacd5b057e5c37d50aa.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="df0fb48401646587784622c9b667f665ebcecb9cf17c5cacd5b057e5c37d50aa.png" title=" Usuario clicks on button send" width="2160"/>
+                <img src="1215178602a2e5c1a2133791bd063e5eb158ceb0590aa21d328a7dd3f0f76a63.png" title=" Usuario clicks on button send (completed)" width="2160"/>
+                <img src="1215178602a2e5c1a2133791bd063e5eb158ceb0590aa21d328a7dd3f0f76a63.png" title=" Usuario clicks on Lbl operation" width="2160"/>
+                <img src="27433a21a7e0e1afc29e3950a9da18c56eff52b1d8c2f1e78ea98b98ddf93a17.png" title=" Usuario clicks on Lbl operation (completed)" width="2160"/>
+                <img src="27433a21a7e0e1afc29e3950a9da18c56eff52b1d8c2f1e78ea98b98ddf93a17.png" title=" Usuario enters '8' into Inp figure number" width="2160"/>
+                <img src="71a6d3b90606c5788c9aeb9684f3a2deabb40433d5608c421446a3fbb68db050.png" title=" Usuario enters '8' into Inp figure number (completed)" width="2160"/>
+                <img src="8d14a8c4911a4a464062f86eaa452ebb51b525f5408757508bc79639244e0c12.png" title=" Usuario selects #value in Select response" width="2160"/>
+                <img src="f960602f181eb9efc6187e74ff98f00ec81257a01135ec557f053ae1e7a829eb.png" title=" Usuario selects #value in Select response (completed)" width="2160"/>
+                <img src="f960602f181eb9efc6187e74ff98f00ec81257a01135ec557f053ae1e7a829eb.png" title=" Usuario clicks on chk operation" width="2160"/>
+                <img src="561edd368bc38daf3e3f7b37c7ce8c7080c551b6baf56916b913bc3e9f234059.png" title=" Usuario clicks on chk operation (completed)" width="2160"/>
+                <img src="561edd368bc38daf3e3f7b37c7ce8c7080c551b6baf56916b913bc3e9f234059.png" title=" Usuario clicks on button send" width="2160"/>
+                <img src="58817fbca9af7a5bdb4c6fa4885ce325c3beeb2a6d5e3f508d24df92962d9029.png" title=" Usuario clicks on button send (completed)" width="2160"/>
+                <img src="58817fbca9af7a5bdb4c6fa4885ce325c3beeb2a6d5e3f508d24df92962d9029.png" title=" Usuario complete form (completed)" width="2160"/>
+                <img src="58817fbca9af7a5bdb4c6fa4885ce325c3beeb2a6d5e3f508d24df92962d9029.png" title=" And the user complete the form (completed)" width="2160"/>
+                <img src="58817fbca9af7a5bdb4c6fa4885ce325c3beeb2a6d5e3f508d24df92962d9029.png" title=" Then validates that the test was successfully completed" width="2160"/>
+                <img src="58817fbca9af7a5bdb4c6fa4885ce325c3beeb2a6d5e3f508d24df92962d9029.png" title=" Then validate text: <span class='success-color'>SUCCESS</span>" width="2160"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.1</span>
+</div>
+</body>
+</html>
