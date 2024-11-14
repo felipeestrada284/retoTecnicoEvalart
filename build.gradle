@@ -1,0 +1,83 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:3.4.2")
+        classpath "net.serenity-bdd:serenity-single-page-report:3.3.0"
+    }
+}
+
+plugins {
+    id "net.serenity-bdd.serenity-gradle-plugin" version "3.3.0"
+    id 'java'
+}
+
+defaultTasks 'clear', 'test', 'aggregate'
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityCoreVersion='3.7.1'
+    poi='4.1.1'
+    slf4jVersion='1.7.7'
+    ensure='3.2.0'
+    postgresql= '42.3.8'
+    logbackVersion = '1.4.12'
+    lombokVersion = '1.18.22'
+}
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-junit:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}"
+    testImplementation "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}"
+    implementation "org.assertj:assertj-core:${serenityCoreVersion}"
+    implementation "org.apache.poi:poi:${poi}"
+    implementation "org.apache.poi:poi-ooxml:${poi}"
+
+
+    implementation "org.slf4j:slf4j-simple:${slf4jVersion}"
+    implementation "ch.qos.logback:logback-classic:${logbackVersion}"
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.7.16'
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.7.16'
+}
+
+test {
+    useJUnit {
+        include "**/*";
+    }
+    testLogging {
+        showStandardStreams = true
+        events "PASSED", "FAILED", "SKIPPED"
+        exceptionFormat "full"
+    }
+    systemProperties System.getProperties()
+    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+}
+
+serenity{
+    testRoot="com.gestionobras"
+    requirementsBaseDir=["src/test/resources/features/"]
+    reports=["single-page-html"]
+}
+
+tasks.withType(Test) {
+    testLogging {
+        showStandardStreams = true
+        events "PASSED", "FAILED", "SKIPPED"
+        exceptionFormat "full"
+    }
+}
